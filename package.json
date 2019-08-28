@@ -1,0 +1,20 @@
+{
+  "name": "one.node.js",
+  "version": "1.0.0",
+  "description": "This is a quick create API project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "one",
+  "license": "ISC",
+  "dependencies": {
+    "@koa/cors": "^3.0.0",
+    "koa": "^2.8.1",
+    "koa-body": "^4.1.1",
+    "koa-router": "^7.4.0",
+    "koa-static": "^5.0.0",
+    "mysql": "^2.17.1"
+  }
+}

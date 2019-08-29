@@ -1,9 +1,8 @@
 module.exports = {
     list: [
         {
-            path: "/name",
+            path: "/index",
             method: "GET",
-            sql: "",
             data: "Hello one.js!!!"
         }
     ]

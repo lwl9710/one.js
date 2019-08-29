@@ -1,13 +1,14 @@
 module.exports = {
+    isCors: true, //是否允许跨域 
     listen: {
         host: "localhost",
         port: 8000
     },
-    dataBase: {
+    mysql: {
         host: "localhost",
         port: 3306,
-        library: "www",
-        username: "root",
-        password: "123456"
+        user: "root",
+        password: "123456",
+        database: "www"
     }
 }

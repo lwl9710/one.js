@@ -1,5 +1,5 @@
 module.exports = {
-    isCors: true, //是否允许跨域 
+    //isCors: true, //配置跨域
     listen: {
         host: "localhost",
         port: 8000

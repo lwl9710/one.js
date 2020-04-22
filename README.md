@@ -29,7 +29,7 @@ app.js 启动文件
    //位置: 项目目录/config/server.one.config.js
    
    module.exports = {
-       isCors: true, //是否运行跨域
+       // isCors: true, 是否允许跨域
        listen: {
            host: "localhost", //监听主机
            port: 8000 //监听端口号
@@ -44,7 +44,7 @@ app.js 启动文件
    }
    ```
 
-2. 配置路由(Api)：此目录可添加任意API(路由/js)文件,程序会自动扫描并注册
+2. 配置路由(Api)文件: 此目录可添加任意API(路由/js)文件,程序会自动扫描并注册
 
    ``` javascript
    // 项目目录/routes/*.js
@@ -62,14 +62,14 @@ app.js 启动文件
    }
    ```
 
-   * <font color="red">注: 配置baseUrl后API路径为 baseUrl + path</font>
-   * <font color="red">注：使用sql时请保证sql配置正确</font>
-   * <font color="red">注：定义"动态sql"时可以使用“?”为参数占位符并通过sqlParam配置参数，请保证参数顺序正确</font>
+   * 注: 配置baseUrl后API路径为 baseUrl + path
+   * 注: 使用sql时请保证sql配置正确
+   * 注: 定义"动态sql"时可以使用“?”为参数占位符并通过sqlParam配置参数，请保证参数顺序正确
 
 3. 静态资源
 
    * static目录下的资源会自动映射到"/" + 相对于 static的路径位置
-   * 如：<font color="red">项目目录/static/test.jpg</font> 会映射为: <font color="red">http:localhost:8000/test.jpg</font> 以此类推
+   * 如: 项目目录/static/test.jpg 会映射为: http:localhost:8000/test.jpg 以此类推
 
 4. 启动项目
 
@@ -77,4 +77,4 @@ app.js 启动文件
    node app.js
    ```
 
-<font color="red">说明:  项目克隆完毕后可直接进行启动，打开浏览器访问 "http://localhost:8000"目录试试吧</font>
+说明: 项目克隆完毕后可直接进行启动，打开浏览器访问 "http://localhost:8000"目录试试吧

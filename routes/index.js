@@ -6,7 +6,6 @@ const router = new Router();
 const dirList = fs.readdirSync("./routes");
 let temporaryArr = [];
 let src = "";
-let url = "";
 
 dirList.forEach(name=>{
     src = path.join(__dirname,name);
@@ -14,7 +13,7 @@ dirList.forEach(name=>{
     if(name == "index.js")return;
     temporaryArr.push(require(src));
 })
-temporaryArr.forEach(item=>{
+temporaryArr.length && temporaryArr.forEach(item=>{
     item.list.forEach(route=>{
         router[route.method ? route.method.toLowerCase() : "get"](item.baseUrl ? path.join(item.baseUrl,route.path).replace(/\\/g,"/") : route.path,async ctx=>{
             if(route.sql){
@@ -49,7 +48,7 @@ temporaryArr.forEach(item=>{
                 //配置固定返回
                 ctx.body = route.data;
             }
-            
+
         })
     })
 })

@@ -56,7 +56,7 @@ app.js 启动文件
            //     sql: ***: String,    //sql 当定义sql时以sql数据为主
            //     sqlParam: []： Array,   //sql参数 
            //     method: ***: String,  //请求方式 GET POST ... all(所有请求)
-           //     data: ***: Any
+           //     data: ***: Any //返回(模拟)的数据 可以是任意类型 这里写什么最终返回什么
            // }
        ]
    }
